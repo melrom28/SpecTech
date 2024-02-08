@@ -24,6 +24,7 @@ a:hover {
 
 body {
   margin: 0;
+  padding:0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -82,35 +83,85 @@ h1{
   font-family: 'Lobster', sans-serif;
 }
 
+.card {
+  background: transparent !important;
+}
 
 /****** CALCULATOR ******/
 
-.calculator-button > Button {
-  width: 50px; 
-  height: 50px; 
+.calc_Result{
+  font-family: 'Gill Sans' ;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 4rem;
+  font-size: 3rem;
+  border-radius: 5px;
 }
 
-
-.button-container {
+.calc_Buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+}
+.calcDisp{
+  border-radius: 10px;
+  background-color: #d4a3731d;
 }
 
-Button {
-  width: calc(25% - 10px);
-  margin-bottom: 10px;
+.calcBtn_col {
+  width: 20%; /* Equal width for all columns */
+  padding: 0; /* Remove default padding */
 }
 
-button.last {
-  margin-right: 0;
+.calcBtn_col > button {
+  font-family: fantasy;
+  width: 75%; /* Button width fills the column */
+  aspect-ratio: 1; /* Maintain 1:1 aspect ratio (height equals width) */
+  padding: 0; /* Remove button padding */
+  margin-bottom: 1rem;
+  background-color: #d4a373 !important;
+  border: none;
 }
 
-.calcResult {
-  padding: 0;
-  min-height: 5rem;
-  font-size: 3rem;
+.last {
+  margin-right: 0; /* No margin for the last button in each row */
 }
 
 
+/***************JSON Page******************/
+.json_Card{
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100%;
+  min-height: calc(width*1.75) !important;
+}
 
+.json_Card > .card-header > p ,
+.jsonCardBody > p {
+ margin-bottom: 0.5em ;
+ text-wrap: nowrap;
+ overflow: hidden;
+}
+
+.name{
+  font-size: 1em !important;
+  padding: 0 !important;
+}
+
+.userName,
+.email {
+  font-size: 0.75rem !important;
+}
+
+.jsonCardBody > p{
+  margin-block: auto !important;
+}
+
+.json_Cards{
+  background: rgba(230, 230, 235, 0.326);
+  border-radius: 10px;
+}
+
+
+/* *********HOBBIES******** */

@@ -9,6 +9,7 @@ import Hobbies from './pages/Hobbies';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NotFound } from './pages/NotFound';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path='/calculator' element={<Calculator />}></Route>
           <Route path='/json' element={<Json />}></Route>
           <Route path='/hobbies' element={<Hobbies />}></Route>
+          <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

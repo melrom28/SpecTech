@@ -1,16 +1,15 @@
 import { Button, Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
-import { useState} from 'react';
-import ToggleButton from "../components/ToggleButton";
 
 
 export default function Home() {
    
   return (
     <Container fluid className="vw-100">
-      <ToggleButton></ToggleButton>
+      
       <Row className="d-flex justify-content-center">
-        <Col xs={12} md={10} lg={9}> 
-                 <h1 className="text-center mb-4">Digital Transformation</h1>
+        <Col xs={12} md={10} lg={6} xl={6}> 
+                
+                 <h1 className="text-center my-4">Digital Transformation</h1>
                  {/* ================Input================== */}
                 <InputGroup className="mb-4">
                 <InputGroup.Text>Created by:</InputGroup.Text>
@@ -27,8 +26,8 @@ export default function Home() {
                 </div>
 
                 {/* ================Hobbies================== */}
-                <Card>
-                  <Card.Body>
+                <Card className="card">
+                  <Card.Body className="card">
                     <Card.Title>My Hobbies</Card.Title>
                     <Card.Text>
                       Hi! My name is Rommel Esteves. By clicking the button below, you will find interesting things about me.

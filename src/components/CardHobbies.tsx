@@ -1,19 +1,26 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Card } from 'react-bootstrap';
 
-function cardHobbies() {
+interface HobbiesCardProps {
+  hobby: string;
+  image:string;
+  description:string
+}
+
+
+const CardHobbies = ({ hobby , image , description }: HobbiesCardProps) => {
   return (
-    <Card>
-      <Card.Header as="h5">{}</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
+    <Card 
+      className='m-2 mx-auto'
+      style={{width: '18rem'}}>
+        <Card.Img className="hobbiesImg" variant="top" src={`${image}`} />
+        <Card.Body>
+          <Card.Title>{hobby}</Card.Title>
+          <Card.Text>
+            {description}
+          </Card.Text>
+        </Card.Body>
     </Card>
   );
 }
 
-export default cardHobbies;
+export default CardHobbies;
